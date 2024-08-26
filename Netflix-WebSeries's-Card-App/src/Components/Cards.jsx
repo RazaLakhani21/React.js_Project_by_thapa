@@ -1,5 +1,6 @@
 import React from 'react'
 import "./index.css"
+import Images from './Images';
 
 function Cards(props) {
   return (
@@ -8,7 +9,7 @@ function Cards(props) {
 
         <div className="card">
 
-          <img src={props.imgsrc} alt='myPic' className="car___img" />
+          <Images sendImg={props.imgsrc} />
 
           <div className="car__info">
 

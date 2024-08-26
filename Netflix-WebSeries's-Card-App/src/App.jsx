@@ -25,6 +25,7 @@ function App() {
     {/* {Sdata.map(ncard)} // using this we can print as many times we want cards to get printed */}
 
     {Sdata.map((val)=> <Cards // This is the use of Fat Arrow Function
+    key={val.id} // To remove the "Unique Key" Error from the Card Component, TYPE : "key" not "keys", we've to insert unique keys in every value of 'Sdata'.
     sname={val.sname}
     imgsrc={val.imgsrc}
     title={val.title}
