@@ -2,41 +2,35 @@ import "./App.css";
 import Cards from "./Components/Cards";
 import Sdata from "./Components/Sdata";
 
+
+// function ncard(CurrentVal,index,arr) -> a sample of a function with arguments it accepts !
+// for more detailed information about this map() function, you can watch :- https://youtu.be/EETqnvQfpEg?si=C_j0G9Am39U_565L
+
+// function ncard(val){
+//   console.log(val)
+//   return(
+//     <Cards
+//     sname={val.sname}
+//     imgsrc={val.imgsrc}
+//     title={val.title}
+//     links={val.links}
+//   />
+//   );
+
+// }
 function App() {
   return (
     <>
-      <h1 className="heading_style">List of Top 3 Netlix Series</h1>
+      <h1 className="heading_style">List of Top 3 Netlix Series</h1>      
+    {/* {Sdata.map(ncard)} // using this we can print as many times we want cards to get printed */}
 
-      <Cards
-        sname={Sdata[0].sname}
-        imgsrc={Sdata[0].imgsrc}
-        title={Sdata[0].title}
-        links={Sdata[0].links}
-      />
-      <Cards
-        sname={Sdata[1].sname}
-        imgsrc={Sdata[1].imgsrc}
-        title={Sdata[1].title}
-        links={Sdata[1].links}
-      />
-      <Cards
-        sname={Sdata[2].sname}
-        imgsrc={Sdata[2].imgsrc}
-        title={Sdata[2].title}
-        links={Sdata[2].links}
-      />
-      <Cards
-        sname={Sdata[3].sname}
-        imgsrc={Sdata[3].imgsrc}
-        title={Sdata[3].title}
-        links={Sdata[3].links}
-      />
-      <Cards
-        sname={Sdata[4].sname}
-        imgsrc={Sdata[4].imgsrc}
-        title={Sdata[4].title}
-        links={Sdata[4].links}
-      />
+    {Sdata.map((val)=> <Cards // This is the use of Fat Arrow Function
+    sname={val.sname}
+    imgsrc={val.imgsrc}
+    title={val.title}
+    links={val.links}
+  />)} {/* // you can also use inline method to print cards using map() function */}
+
     </>
   );
 }
